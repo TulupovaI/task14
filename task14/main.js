@@ -1,14 +1,15 @@
 // №1
-let count = +prompt('Введіть число');
-function counter() {
-    let num = +prompt('Введіть число');
-    count = count + num;
-    return count;
+let foo = function (){
+  let res = 0;
+  return function(x) { 
+    res += x;     
+    return res; 
+  }   
 }
-
-alert( counter()); 
-alert( counter()); 
-alert( counter()); 
+let sum = foo();
+console.log(sum(3));
+console.log(sum(5));
+console.log(sum(10));
 
 // №2
 
